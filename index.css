@@ -6,12 +6,18 @@
 body {
    background-color: whitesmoke;
    color: black;
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-family: 'Amatic SC', cursive;
+   font-weight: 900;
+   font-size: 20px;
+}
+.top-margin {
+    height: 8.1em;
 }
 header {
     width: 100vw;
-    position: fixed;    
-    color: burlywood;
+    height: 6em;
+    position: fixed;
+    color: #d3cca3;
     font-style: oblique;
     background-color: white;
     display: flex;
@@ -24,18 +30,22 @@ header {
     font-style: oblique;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: flex-start;
+}
+#header-img {
+    position: absolute;
+    margin: 0 0 0 3em;
+    width: 6em;
+    z-index: -1;
+}
+#header-title {
+    align-self: flex-end;
+    font-size: 3.2em;
+    font-family: 'Barrio', cursive;
 }
 .nav-box {
     align-self: flex-end;
     width: 40%;
-}
-#header-img {
-    width: 8em;
-}
-#header-title {
-    align-self: center;
-    font-size: 3.2em;
 }
 #nav-list {
     list-style: none;
@@ -49,5 +59,49 @@ header {
     font-size: 1.1em;
 }
 .nav-anchor:hover {
-    color: burlywood;
+    color: #d3cca3;
+}
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.display {
+    margin: 2em 0 2em 0;
+}
+#product-info {    
+    width: 50%;
+    text-align: justify;
+}
+#pricing {
+    width: 50%;
+    height: 15em;
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.pricing-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 12em;
+    height: 100%;
+    border: black;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 0.1em;
+    text-align: center;
+}
+.title-pricing {
+    background-color: blanchedalmond;
+    margin: 0;
+}
+.pricing-box>div  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25%;  
 }
