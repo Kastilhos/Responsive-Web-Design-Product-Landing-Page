@@ -105,3 +105,39 @@ main {
     justify-content: space-between;
     height: 25%;  
 }
+.contato {
+    background-color: rgba(222, 184, 135, 0.411);
+    margin: 2em;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.contato>.texto-contato {
+    width: 50%;
+    margin: 2rem 2rem 1rem 2rem;
+}
+.contato>form {
+    display: flex;
+    flex-direction: row;
+    height: 2em;
+    width: 50%;
+    margin: 1rem 2rem;
+}
+.contato #email {
+    width: 100%;
+    margin: 0px;
+    border-radius: 0;
+}
+.contato #submit {
+    width: 30%;
+    padding: 0 0 0 0.4em;
+    margin: 0 0 0 -0.45em;
+    background-color: #d3cca3;
+    border: 0.1em black solid;
+    border-radius: 10px;
+    z-index: -1;
+}
