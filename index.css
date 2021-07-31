@@ -70,7 +70,7 @@ main {
 .display {
     margin: 2em 0 2em 0;
 }
-#product-info {    
+.product-info {    
     width: 50%;
     text-align: justify;
 }
