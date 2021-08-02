@@ -3,7 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    --top-spacing: 120px;
+    scroll-padding-top: var(--top-spacing);
+}
 body {
+   margin: var(--top-spacing) auto;
    background-color: whitesmoke;
    color: black;
    font-family: 'Amatic SC', cursive;
@@ -16,6 +21,7 @@ body {
 header {
     width: 100vw;
     height: 6em;
+    top: 0;
     position: fixed;
     color: #d3cca3;
     font-style: oblique;
@@ -47,21 +53,22 @@ header {
     align-self: flex-end;
     width: 40%;
 }
-#nav-list {
+.nav-list {
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
-.nav-anchor {
+.nav-list li a {
     text-decoration: none;
     color: black;
     font-size: 1.1em;
 }
-.nav-anchor:hover {
+.nav-link:hover {
     color: #d3cca3;
 }
 main {
+    margin: 150px 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -82,6 +89,11 @@ main {
     flex-direction: row;
     justify-content: space-between;
 }
+@media (max-width: 350px) {
+    #pricing {
+        flex-direction: column;
+    }
+}
 .pricing-box {
     display: flex;
     flex-direction: column;
@@ -94,6 +106,18 @@ main {
     border-radius: 5px;
     border-width: 0.1em;
     text-align: center;
+}
+.pricing-box button {
+    width: 35%;
+    height: 1.5rem;
+    align-self: center;
+    margin: 0.1rem;
+    border: solid 1px black;
+    border-radius: 5px;
+    background-color: blanchedalmond;
+}
+.pricing-box button:hover {
+    background-color: #d3cca3;
 }
 .title-pricing {
     background-color: blanchedalmond;
@@ -131,6 +155,7 @@ main {
     width: 100%;
     margin: 0px;
     border-radius: 0;
+    z-index: 2;
 }
 .contato #submit {
     width: 30%;
@@ -138,6 +163,16 @@ main {
     margin: 0 0 0 -0.45em;
     background-color: #d3cca3;
     border: 0.1em black solid;
-    border-radius: 10px;
-    z-index: -1;
+    border-radius: 0 10px 10px 0;
+}
+.footer {
+    font-size: 16px;
+    background-color: white;
+    padding: 1rem 1rem 3rem 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.footer .nav-list li {
+    margin: 0 0.5rem;
 }
